@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
 
   def update
     @article.update(article_params)
-    redirect_to article_path(@article.id), flash.alert = "Article was successfully created."
+    redirect_to article_path(@article.id)
   end
 
   def destroy
