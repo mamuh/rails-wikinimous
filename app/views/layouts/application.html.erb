@@ -7,9 +7,16 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;600&display=swap" rel="stylesheet">
   </head>
 
-  <body>
-    <%= yield %>
+  <body style="box-sizing: border-box; padding: 0; font-family: 'Roboto Slab', serif;">
+    <nav style="display: flex; background-color: #F8F8F8; border: 1px solid #c1c1c1; justify-content: space-between; padding: 0 15px; align-items: center;">
+      <a href="/" style="text-decoration: none;"><p>Wikinimous</p></a>
+      <%= link_to "New Article", new_article_path, {:style=> "text-decoration: none;"} %>
+    </nav>
+    <div class="container" style="width: 50vw; margin: 0 auto;">
+      <%= yield %>
+    </div>
   </body>
 </html>
